@@ -1,0 +1,144 @@
+
+
+
+
+
+
+var currentTab = 0; // Current tab is set to be the first tab (0)
+showTab(); // Display the current tab
+
+function showTab() {
+  // This function will display the specified tab of the form...
+
+  var x = document.getElementsByClassName("tab");
+  
+  var roundedBtn=document.getElementsByClassName
+
+  ('rounded-btn');
+  console.log(x);
+  console.log(x[0]);
+
+ 
+let n=0;
+  while(n<x.length){
+  
+  console.log(roundedBtn);
+ 
+ 
+ 
+  // ... and fix the Previous/Next buttons:
+ 
+  if (n == 0) {
+    
+    x[n].addEventListener("click",show=()=>{
+     
+      console.log('hi sovan button1 clicked');
+    
+      roundedBtn[0].style.backgroundColor='red'
+      roundedBtn[1].classList.remove("disabled");
+      roundedBtn[1].classList.add("active");
+      roundedBtn[2].classList.add("disabled");
+     
+    });
+  
+    console.log(roundedBtn);
+  
+    
+  }
+ 
+   else if(n==1 ) {
+    x[n].addEventListener("click",show=()=>{
+      console.log('hi sovan button2 clicked');
+      
+      roundedBtn[0].style.backgroundColor = "red";
+      roundedBtn[1].style.backgroundColor='rgb(0, 136, 255)';
+      roundedBtn[2].classList.remove("disabled");
+      roundedBtn[2].classList.add("active");
+
+    
+  
+      
+  });
+}
+  
+
+ else if(n==2) {
+  x[n].addEventListener("click",show=()=>{
+    console.log('hi sovan button3 clicked');
+    roundedBtn[0].style.backgroundColor = "red";
+    roundedBtn[1].style.backgroundColor='rgb(0, 136, 255)';
+    roundedBtn[2].style.backgroundColor='rgb(224, 170, 6)'
+});
+}
+
+
+n++
+console.log(n);
+  // else if(n==2){
+  //   x[n].addEventListener("click",show=()=>{
+  //     console.log('hi sovan button3 clicked');
+  // });
+  // }
+  // console.log(n);
+  // if (n == (x.length - 1)) {
+  //   document.getElementById("nextBtn").innerHTML = "Submit";
+  // } else {
+  //   document.getElementById("nextBtn").innerHTML = "Next";
+  // }
+  // ... and run a function that displays the correct step indicator:
+  // fixStepIndicator(n)
+}
+}
+
+function nextPrev(n) {
+  // This function will figure out which tab to display
+  var x = document.getElementsByClassName("tab");
+  // Exit the function if any field in the current tab is invalid:
+  if (n == 1 && !validateForm()) return false;
+  // Hide the current tab:
+  x[currentTab].style.display = "none";
+  // Increase or decrease the current tab by 1:
+  currentTab = currentTab + n;
+  // if you have reached the end of the form... :
+  if (currentTab >= x.length) {
+    //...the form gets submitted:
+    document.getElementById("regForm").submit();
+    return false;
+  }
+  // Otherwise, display the correct tab:
+  showTab(currentTab);
+}
+
+function validateForm() {
+  // This function deals with validation of the form fields
+  var x, y, i, valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByTagName("input");
+  // A loop that checks every input field in the current tab:
+  for (i = 0; i < y.length; i++) {
+    // If a field is empty...
+    if (y[i].value == "") {
+      // add an "invalid" class to the field:
+      y[i].className += " invalid";
+      // and set the current valid status to false:
+      valid = false;
+    }
+  }
+  // If the valid status is true, mark the step as finished and valid:
+  if (valid) {
+    document.getElementsByClassName("step")[currentTab].className += " finish";
+  }
+  return valid; // return the valid status
+}
+
+function fixStepIndicator(n) {
+  // This function removes the "active" class of all steps...
+  var i, x = document.getElementsByClassName("step");
+  for (i = 0; i < x.length; i++) {
+    x[i].className = x[i].className.replace(" active", "");
+  }
+  //... and adds the "active" class to the current step:
+  x[n].className += " active";
+}
+
+

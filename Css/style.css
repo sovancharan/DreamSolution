@@ -1,0 +1,177 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+.dream-soultion{
+    padding-top: 4rem;
+}
+
+.rounded-btn{
+padding: 3rem 0rem 3rem 0rem;
+    border-radius: 50%;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    /* margin-left: 28rem;
+    margin-right: 28rem; */
+}
+.buttons-main-div{
+    padding-top: 5rem;
+}
+.red-btn{
+    background-color: red ;
+    color: white;
+    border: 10px solid gray;
+
+}
+.btn-one{
+    font-weight: 800;
+    font-size: 3rem;
+}
+.btn-vedio{
+    font-weight: 100;
+    font-size: 1.5rem;
+}
+.sky-btn{
+    background-color: rgb(0, 136, 255);
+    color: white;
+    border: 10px solid gray;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+.yellow-btn{
+    background-color: rgb(224, 170, 6);
+    border: 10px solid gray;
+    color: white;
+}
+
+.footer-heading {
+    text-align: center;
+}
+
+.footer-main-div{
+    padding-top: 10rem;
+}
+.input-section{
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    width: 98%;
+}
+.footer-input{
+    padding-left: 11rem;
+    padding-right: 10rem;
+}
+.textarea-section{
+    margin-top: 2rem;
+}
+.para{
+    padding-top: 0.5rem;
+    padding-left: 14rem;
+}
+.button-item{
+    font-weight: 500;
+    font-size: 1.5rem;
+    padding-right: 1rem;
+    padding-top: 0.3rem;
+}
+.send-us-btn{
+    border-radius: 25px;
+    padding-top: 0.5rem ;
+    padding-bottom: 0.5rem;
+}
+
+.nav-tabs {
+    border-bottom: none;
+    justify-content: center;
+    padding-top: 5rem;
+}
+
+.nav-tabs .nav-link {
+    /* margin-bottom: -1px; */
+    background: 0 0;
+    border: none;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+#home-tab{
+    background-color: rgb(27, 69, 219);
+    color: white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 5rem;
+}
+#profile-tab{
+    background-color: gray;
+    color: white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 3rem;
+    padding-right: 2rem;
+    border-radius: 5rem;
+    margin-left: 2rem;
+}
+.tab-pane{
+    padding-top: 6rem;
+}
+
+
+
+
+
+/* Style the form */
+#regForm {
+    background-color: #ffffff;
+    margin: 100px auto;
+    padding: 40px;
+    width: 70%;
+    min-width: 300px;
+  }
+  
+  /* Style the input fields */
+  input {
+    padding: 10px;
+    width: 100%;
+    font-size: 17px;
+    font-family: Raleway;
+    border: 1px solid #aaaaaa;
+  }
+  
+  /* Mark input boxes that gets an error on validation: */
+  input.invalid {
+    background-color: #ffdddd;
+  }
+  
+  /* Hide all steps by default: */
+  .tab {
+    /* display: none; */
+  }
+  
+  /* Make circles that indicate the steps of the form: */
+  .step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+  }
+  
+  /* Mark the active step: */
+  .step.active {
+    opacity: 1;
+  }
+  
+  /* Mark the steps that are finished and valid: */
+  .step.finish {
+    background-color: #04AA6D;
+  }
+
+
+  #regForm{
+    text-align: center ;
+  }
