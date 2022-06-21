@@ -11,84 +11,56 @@ function showTab() {
   // This function will display the specified tab of the form...
 
   var x = document.getElementsByClassName("tab");
-  
-  var roundedBtn=document.getElementsByClassName
 
-  ('rounded-btn');
+
+  var roundedBtn = document.getElementsByClassName
+
+    ('rounded-btn');
   console.log(x);
   console.log(x[0]);
 
- 
-let n=0;
-  while(n<x.length){
-  
-  console.log(roundedBtn);
- 
- 
- 
-  // ... and fix the Previous/Next buttons:
- 
-  if (n == 0) {
-    
-    x[n].addEventListener("click",show=()=>{
-     
-      console.log('hi sovan button1 clicked');
-    
-      roundedBtn[0].style.backgroundColor='red'
-      roundedBtn[1].classList.remove("disabled");
-      roundedBtn[1].classList.add("active");
-      roundedBtn[2].classList.add("disabled");
-     
-    });
-  
-    console.log(roundedBtn);
-  
-    
-  }
- 
-   else if(n==1 ) {
-    x[n].addEventListener("click",show=()=>{
-      console.log('hi sovan button2 clicked');
-      
-      roundedBtn[0].style.backgroundColor = "red";
-      roundedBtn[1].style.backgroundColor='rgb(0, 136, 255)';
-      roundedBtn[2].classList.remove("disabled");
-      roundedBtn[2].classList.add("active");
 
-    
-  
-      
+
+
+
+  let tab1 = document.getElementById('tab1');
+  let tab2 = document.getElementById('tab2');
+  let tab3 = document.getElementById('tab3');
+
+
+
+  tab1.addEventListener("click", show = () => {
+
+   
+
+    tab2.disabled=false;
+
   });
-}
-  
 
- else if(n==2) {
-  x[n].addEventListener("click",show=()=>{
-    console.log('hi sovan button3 clicked');
-    roundedBtn[0].style.backgroundColor = "red";
-    roundedBtn[1].style.backgroundColor='rgb(0, 136, 255)';
-    roundedBtn[2].style.backgroundColor='rgb(224, 170, 6)'
+  tab2.addEventListener("click", show = () => {
+    console.log('hi sovan button2 clicked');
+
+ 
+
+    tab3.disabled=false;
+
+
+
+
+  });
+
+
+tab3.addEventListener("click", show = () => {
+  console.log('hi sovan button3 clicked');
+  roundedBtn[0].style.backgroundColor = "red";
+  roundedBtn[1].style.backgroundColor = 'rgb(0, 136, 255)';
+  roundedBtn[2].style.backgroundColor = 'rgb(224, 170, 6)'
 });
-}
 
 
-n++
-console.log(n);
-  // else if(n==2){
-  //   x[n].addEventListener("click",show=()=>{
-  //     console.log('hi sovan button3 clicked');
-  // });
-  // }
-  // console.log(n);
-  // if (n == (x.length - 1)) {
-  //   document.getElementById("nextBtn").innerHTML = "Submit";
-  // } else {
-  //   document.getElementById("nextBtn").innerHTML = "Next";
-  // }
-  // ... and run a function that displays the correct step indicator:
-  // fixStepIndicator(n)
-}
-}
+
+
+
 
 function nextPrev(n) {
   // This function will figure out which tab to display
@@ -141,4 +113,4 @@ function fixStepIndicator(n) {
   x[n].className += " active";
 }
 
-
+}
